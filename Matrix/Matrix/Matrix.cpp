@@ -30,13 +30,19 @@ Matrix::Matrix(int n)
 
 Matrix::Matrix(int m[], int sizeArray)
 {
-	matrix = new int[sizeArray];
-	size = sizeArray;
-	for (int i = 0; i < sizeArray; ++i)
-	{
-		matrix[i] = m[i];
-	}
+	int sqrtNumber = sqrt(sizeArray);
 
+	if ((sqrtNumber * sqrtNumber) == sizeArray) {
+		matrix = new int[sizeArray];
+		size = sizeArray;
+		for (int i = 0; i < sizeArray; ++i)
+		{
+			matrix[i] = m[i];
+		}
+	}
+	else {
+		cout << "The size of the array does not have an integer square root." << endl;
+	}
 }
 
 // for testing purposes
