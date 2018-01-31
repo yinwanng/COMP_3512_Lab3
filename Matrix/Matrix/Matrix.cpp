@@ -1,5 +1,6 @@
 #include "Matrix.hpp"
 #include <iostream>
+#include <math.h>  
 
 using std::cout;
 using std::endl;
@@ -27,6 +28,18 @@ Matrix::Matrix(int n)
 	}
 }
 
+Matrix::Matrix(int m[], int sizeArray)
+{
+	matrix = new int[sizeArray];
+	size = sizeArray;
+	for (int i = 0; i < sizeArray; ++i)
+	{
+		matrix[i] = m[i];
+	}
+
+}
+
+// for testing purposes
 void Matrix::printTest() const
 {
 	for (int i = 0; i < size; ++i)
