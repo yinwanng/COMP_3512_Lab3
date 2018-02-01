@@ -11,9 +11,8 @@ public:
 	void set_value(int, int, int);
 	int get_value(int, int) const;
 	void clear();
-
-
-
+	friend void swap(Matrix&, Matrix&);
+	Matrix& operator=(Matrix);
 private:
 	int *matrix;
 	int size;

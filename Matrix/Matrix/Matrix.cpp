@@ -87,4 +87,15 @@ void Matrix::clear()
 	}
 }
 
+Matrix & Matrix::operator=(Matrix other)
+{
+	swap(*this, other);
+	return *this;
+}
 
+void swap(Matrix &first, Matrix &second)
+{
+	using std::swap;
+	swap(first.size, second.size);
+	swap(first.matrix, second.matrix);
+}

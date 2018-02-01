@@ -30,6 +30,12 @@ int main()
 
 	m1.printMatrixTest();
 
+	Matrix m2;
+	m2 = m1;
+
+	cout << "Matrix m2" << endl;
+	m2.printMatrixTest();
+
 
 	cout << endl;
 	system("pause");
