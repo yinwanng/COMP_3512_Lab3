@@ -99,3 +99,22 @@ void swap(Matrix &first, Matrix &second)
 	swap(first.size, second.size);
 	swap(first.matrix, second.matrix);
 }
+
+ostream & operator<<(ostream &out, const Matrix &m)
+{
+	int sqrtNumber = sqrt(m.size);
+	for (int i = 0; i < m.size; ++i)
+	{
+		out << m.matrix[i] << "    ";
+		if (i % sqrtNumber == sqrtNumber - 1)
+		{
+			out << "\n";
+		}
+	}
+	return out;
+}
+
+
+
+
+

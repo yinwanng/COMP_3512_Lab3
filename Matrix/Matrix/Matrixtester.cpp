@@ -12,10 +12,6 @@ int main()
 	//m.printTest();
 
 
-
-
-
-
 	Matrix m1 = Matrix(testValues, 9);
 	//Matrix m1 = Matrix(testValues, 16);
 	//m1.printTest();
@@ -35,6 +31,8 @@ int main()
 
 	cout << "Matrix m2" << endl;
 	m2.printMatrixTest();
+	cout << "Test below: " << endl;
+	cout << m2 << endl;
 
 
 	cout << endl;

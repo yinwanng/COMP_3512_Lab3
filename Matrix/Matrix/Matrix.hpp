@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+using std::ostream;
+
 class Matrix
 {
 public:
@@ -13,6 +16,7 @@ public:
 	void clear();
 	friend void swap(Matrix&, Matrix&);
 	Matrix& operator=(Matrix);
+	friend ostream& operator <<(ostream&, const Matrix&);
 private:
 	int *matrix;
 	int size;
