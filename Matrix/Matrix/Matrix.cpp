@@ -54,5 +54,8 @@ void Matrix::printTest() const
 	}
 }
 
-
-
+void Matrix::set_value(int row, int column, int value)
+{
+	int sqrtNumber = sqrt(size);
+	matrix[(row * sqrtNumber) + column] = value;
+}

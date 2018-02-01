@@ -16,7 +16,9 @@ int main()
 
 
 
-	Matrix m1 = Matrix(testValues, 2);
+	Matrix m1 = Matrix(testValues, 9);
+	//m1.printTest();
+	m1.set_value(1, 3, 12);
 	m1.printTest();
 
 	system("pause");
