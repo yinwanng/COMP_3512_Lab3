@@ -59,3 +59,11 @@ void Matrix::set_value(int row, int column, int value)
 	int sqrtNumber = sqrt(size);
 	matrix[(row * sqrtNumber) + column] = value;
 }
+
+int Matrix::get_value(int row, int column) const
+{
+	int location = (row * sqrt(size)) + column;
+	return matrix[location];
+}
+
+
