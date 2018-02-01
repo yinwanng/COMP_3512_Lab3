@@ -9,6 +9,7 @@ public:
 	void printTest() const; // for testing purposes
 	void set_value(int, int, int);
 	int get_value(int, int) const;
+	void clear();
 
 private:
 	int *matrix;

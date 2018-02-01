@@ -22,7 +22,8 @@ int main()
 	m1.printTest();
 	
 	cout << "The position at row 1, column 1 is" << m1.get_value(1,1);
-
+	m1.clear();
+	m1.printTest();
 
 
 	cout << endl;

@@ -66,4 +66,12 @@ int Matrix::get_value(int row, int column) const
 	return matrix[location];
 }
 
+void Matrix::clear()
+{
+	for (int i = 0; i < size; ++i)
+	{
+		matrix[i] = 0;
+	}
+}
+
 
