@@ -54,6 +54,19 @@ void Matrix::printTest() const
 	}
 }
 
+void Matrix::printMatrixTest() const
+{
+	int sqrtNumber = sqrt(size);
+	for (int i = 0; i < size; ++i)
+	{
+		cout << matrix[i] << "    ";
+		if (i % sqrtNumber == sqrtNumber-1)
+		{
+			cout << "\n";
+		}
+	}
+}
+
 void Matrix::set_value(int row, int column, int value)
 {
 	int sqrtNumber = sqrt(size);

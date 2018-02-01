@@ -7,9 +7,12 @@ public:
 	Matrix(int[], int);
 
 	void printTest() const; // for testing purposes
+	void printMatrixTest() const; // testing matrix appeareance
 	void set_value(int, int, int);
 	int get_value(int, int) const;
 	void clear();
+
+
 
 private:
 	int *matrix;
