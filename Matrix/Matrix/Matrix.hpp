@@ -6,6 +6,11 @@ class Matrix
 {
 public:
 	Matrix();
+	~Matrix()
+	{
+		delete[] matrix;
+	}
+
 	Matrix(int);
 	Matrix(int[], int);
 

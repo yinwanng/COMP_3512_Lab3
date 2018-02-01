@@ -113,8 +113,3 @@ ostream & operator<<(ostream &out, const Matrix &m)
 	}
 	return out;
 }
-
-
-
-
-
