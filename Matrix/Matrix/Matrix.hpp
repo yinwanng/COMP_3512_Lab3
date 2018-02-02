@@ -22,7 +22,31 @@ public:
 	friend void swap(Matrix&, Matrix&);
 	Matrix& operator=(Matrix);
 	friend ostream& operator <<(ostream&, const Matrix&);
+	
+	//----
+	Matrix& operator++(); //preincrement
+	Matrix operator++(int); // postincrement
+
 private:
 	int *matrix;
 	int size;
 };
+
+
+
+/*
+
+class Counter {
+Counter& operator++() {
+// do actual increment
+return *this;
+}
+Counter operator++(Counter) {
+Counter tmp(*this);
+operator++();
+return tmp;
+}
+};
+
+*/
+

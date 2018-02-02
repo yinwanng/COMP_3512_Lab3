@@ -93,6 +93,40 @@ Matrix & Matrix::operator=(Matrix other)
 	return *this;
 }
 
+ inline bool operator==(const Matrix &m1, const Matrix &m2)
+{
+	if (m1->size == m2->size) {
+		
+		
+	}
+	return false;
+}
+
+
+
+
+
+
+
+Matrix& Matrix::operator++() //preincrement
+{
+	for (int i = 0; i < size; ++i)
+	{
+		//this->matrix[i] = this->matrix[i] + 1;
+		matrix[i]++;
+	}
+	return *this;
+}
+
+Matrix Matrix::operator++(int)
+{
+	Matrix tmp(*this);
+	operator++();
+	return tmp;
+}
+
+
+
 void swap(Matrix &first, Matrix &second)
 {
 	using std::swap;
@@ -105,7 +139,7 @@ ostream & operator<<(ostream &out, const Matrix &m)
 	int sqrtNumber = sqrt(m.size);
 	for (int i = 0; i < m.size; ++i)
 	{
-		out << m.matrix[i] << "    ";
+		out << m.matrix[i];
 		if (i % sqrtNumber == sqrtNumber - 1)
 		{
 			out << "\n";
@@ -113,3 +147,69 @@ ostream & operator<<(ostream &out, const Matrix &m)
 	}
 	return out;
 }
+
+
+
+
+
+
+//=================================
+/*
+
+1. inline bool operator==(const X& lhs, const X&
+rhs)
+{ //do actual comparison
+}
+2. inline bool operator!=(const X& lhs, const X&
+rhs)
+{
+return !operator==(lhs, rhs);
+}
+3. inline bool operator< (const X& lhs, const X&
+rhs)
+{ //do actual comparison
+}
+
+
+4. inline bool operator> (const X& lhs, const X&
+rhs)
+{
+return operator< (rhs, lhs);
+}
+5. inline bool operator<=(const X& lhs, const X&
+rhs)
+{
+return !operator> (lhs, rhs);
+}
+6. inline bool operator>=(const X& lhs, const X&
+rhs)
+{
+return !operator< (lhs, rhs);
+}
+*/
+
+
+
+/*
+
+// do +=, +, -=, -
+lass Fraction {
+Fraction& operator+=(const Fraction& rhs) {
+// actual addition of rhs to *this
+return *this;
+}
+};
+inline Fraction operator+(Fraction lhs,
+const Fraction& rhs){
+lhs += rhs; return lhs;}
+
+
+
+
+
+
+
+*/
+
+
+

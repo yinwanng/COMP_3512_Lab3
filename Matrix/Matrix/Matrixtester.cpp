@@ -40,7 +40,14 @@ int main()
 	cout << "Matrix m2" << endl;
 	m2->printMatrixTest();
 	cout << "Test below: " << endl;
-	cout << m2 << endl;
+
+	//===
+//	cout << *(m2++) << endl;
+	//cout << ++*m2 << endl;
+	//cout << *m2 << endl;
+	
+	//cout << *m2++ << endl;
+	
 
 
 	cout << endl;
